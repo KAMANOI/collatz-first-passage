@@ -8,6 +8,18 @@ Closes the research program of Papers A–V by stating precisely what has been p
 
 ---
 
+## Erratum (2026-11-12)
+
+- **Theorem 1.2 (DSC-pre) and Theorem 1.3 (FPO) are withdrawn.** The cascade endpoint is not a fixed residue: after a height-K jump the odd core is (3 q_tau + 1) / 2^K, which depends on the bits of q_tau above 2^K (see the erratum of Paper V). The reformulation of the problem as a first-passage probability from one fixed starting point is therefore not valid.
+- **Theorem 1.4 (Monotonicity) is withdrawn in the form "each height K >= 4 is achieved at most once".** The orbit of 139 has two gate-1 jumps of height 4 (139 -> 209 and 11 -> 17). Records are increasing only by definition.
+- **"Equivalent" is an overstatement.** The abstract and Section 5 of the PDF say that Conjecture DSC is equivalent to the Collatz conjecture. Only one direction is argued; the converse is open (Remark 3.2 of the same PDF).
+- **Scope of Theorem 3.1.** The proof shows: Conjecture DSC implies that no orbit has infinitely many gate-1 height records. It does not address nontrivial cycles, and the step from "finitely many gate-1 records" to "no divergence" relies on an assumption stated in Paper O, Section 4, with gate-2 records left open there.
+- Conjecture DSC remains a numerically supported, unproved conjecture (table reproduced for odd n0 <= 10^5). Theorem HCL is unaffected.
+
+The original text described the series as closed by an exact reduction. That description was stronger than what is proved. The PDF in `paper/` is the original, uncorrected version.
+
+---
+
 ## Overview
 
 The paper distils the series into four exact theorems and one open conjecture. The Collatz conjecture is reduced to a statement about the first-passage probability of a specific deterministic map from a fixed starting point to a fixed target — a question in combinatorics and 2-adic dynamics with no probabilistic assumptions.
@@ -29,10 +41,10 @@ The central results are:
 | Result | Method | Status |
 |--------|--------|--------|
 | Theorem HCL: Hensel conditional density exact | Hensel nesting | ✓ proved |
-| Theorem DSC-pre: deterministic cascade endpoint | Cascade algebra | ✓ proved |
-| Theorem FPO: prefix density = first-passage probability | Exact reduction | ✓ proved |
-| Theorem Monotonicity: height records strictly increasing | Cascade theory | ✓ proved |
-| Theorem 3.1: DSC ⟹ Collatz | Logical reduction | ✓ proved |
+| Theorem DSC-pre: deterministic cascade endpoint | Cascade algebra | ✗ withdrawn — false, see Erratum |
+| Theorem FPO: prefix density = first-passage probability | Exact reduction | ✗ withdrawn, see Erratum |
+| Theorem Monotonicity: height records strictly increasing | Cascade theory | true by definition only; "each height once" is false, see Erratum |
+| Theorem 3.1: DSC ⟹ no orbit with infinitely many gate-1 records | Logical reduction | ✓ (scope narrowed, see Erratum) |
 
 ### Open
 
